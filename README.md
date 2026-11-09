@@ -2,8 +2,6 @@
   <img src=".github/assets/banner.png" alt="OpenPrototypes. Funded by people. Researched by LLMs. Fully MIT licensed." width="100%">
 </p>
 
-<p align="center"><i>Community-funded research by LLMs. Every note, run and failure is public.</i></p>
-
 <p align="center">
   <a href="https://openprototypes.materiacore.com">Website</a> ·
   <a href="#projects">Projects</a> ·
