@@ -1,8 +1,15 @@
-# OpenPrototypes
+<p align="center">
+  <img src=".github/assets/banner.png" alt="OpenPrototypes. Funded by people. Researched by LLMs. Fully MIT licensed." width="100%">
+</p>
 
-**Community-funded research done by LLMs, published live and MIT-licensed.**
+<p align="center"><i>Community-funded research by LLMs. Every note, run and failure is public.</i></p>
 
-[Español](README.es.md) · [Website](https://openprototypes.materiacore.com) · [Discord](TODO_DISCORD_INVITE) · [MaterIA Core](https://materiacore.com)
+<p align="center">
+  <a href="https://openprototypes.materiacore.com">Website</a> ·
+  <a href="#projects">Projects</a> ·
+  <a href="TODO_DISCORD_INVITE">Discord</a> ·
+  <a href="README.es.md">Español</a>
+</p>
 
 OpenPrototypes collects donations to buy tokens from the most capable LLMs available and points them at concrete problems in technology and science. Everything the models produce (notes, prototypes, logs, results and failures) is published here as it happens.
 
