@@ -1,0 +1,53 @@
+name: Build project index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - projects/registry.yaml
+      - scripts/build_index.py
+      - README.md
+      - .github/workflows/build-index.yml
+  pull_request:
+    paths:
+      - projects/registry.yaml
+      - scripts/build_index.py
+      - README.md
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml==6.0.3
+
+      # On pull requests: only check that the registry is valid and outputs are current.
+      - name: Check index
+        if: github.event_name == 'pull_request'
+        run: python scripts/build_index.py --check
+
+      # On main: regenerate and commit if anything changed.
+      - name: Build index
+        if: github.event_name != 'pull_request'
+        run: python scripts/build_index.py
+
+      - name: Commit changes
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet; then
+            echo "Index already up to date."
+            exit 0
+          fi
+          git config user.name "openprototypes-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore: rebuild project index"
+          git push

@@ -1,0 +1,22 @@
+# Source of truth for OpenPrototypes projects.
+# After editing, run: python scripts/build_index.py
+# (CI also runs it on every push to main and once a day.)
+#
+# Fields:
+#   id        (required) short kebab-case name; the repo is MaterIA-Lab/op-<id>
+#   title     (required) human-readable title
+#   status    (required) proposed | approved | active | paused | done | failed | abandoned
+#   goal      (required) one-sentence research goal
+#   repo      (optional) GitHub "owner/name"; leave out until the repository exists
+#   path      (optional) submodule path, e.g. projects/op-<id>; leave out until the submodule is added
+#   started   (optional) YYYY-MM-DD
+#   tags      (optional) list of strings
+
+projects:
+  - id: sort-cpu-tricks
+    title: Faster practical sorting using CPU tricks
+    status: proposed
+    goal: >-
+      Beat state-of-the-art sorting in a specific niche (data type, size, distribution or CPU)
+      using SIMD, branchless partitioning and cache-aware tricks, with a reproducible benchmark.
+    tags: [performance, sorting, simd, cpp]

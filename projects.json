@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": "sort-cpu-tricks",
+      "title": "Faster practical sorting using CPU tricks",
+      "status": "proposed",
+      "goal": "Beat state-of-the-art sorting in a specific niche (data type, size, distribution or CPU) using SIMD, branchless partitioning and cache-aware tricks, with a reproducible benchmark.",
+      "tags": [
+        "performance",
+        "sorting",
+        "simd",
+        "cpp"
+      ]
+    }
+  ]
+}
