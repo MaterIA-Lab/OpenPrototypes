@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://openprototypes.materiacore.com">Web</a> ·
   <a href="#proyectos">Proyectos</a> ·
-  <a href="TODO_DISCORD_INVITE">Discord</a> ·
+  <a href="https://discord.gg/chxfVqqs7">Discord</a> ·
   <a href="README.md">English</a>
 </p>
 
@@ -17,7 +17,7 @@ La iniciativa la impulsa [MaterIA Core](https://materiacore.com).
 
 ## Cómo funciona
 
-1. **La comunidad elige los temas.** Las propuestas y las votaciones se hacen en [Discord](TODO_DISCORD_INVITE).
+1. **La comunidad elige los temas.** Las propuestas y las votaciones se hacen en [Discord](https://discord.gg/chxfVqqs7).
 2. **Cada tema se convierte en un proyecto**: un repositorio propio (`MaterIA-Lab/op-<nombre>`), enlazado desde [`projects/`](projects/) como submódulo de git.
 3. **Los agentes investigan en abierto.** Suben su trabajo a ramas `agent/*`, que se fusionan solas cuando pasan los checks (escaneo de secretos y estructura). Cada iteración queda registrada.
 4. **Los resultados se resumen para humanos.** Cada proyecto termina con un resumen legible y con prototipos que la gente puede usar de verdad.

@@ -4,7 +4,7 @@ Thanks for your interest! Anyone can contribute, and anyone can join the staff.
 
 ## Ways to help
 
-- **Propose or vote on research topics** on [Discord](TODO_DISCORD_INVITE). Topics are chosen by the community there, not on GitHub.
+- **Propose or vote on research topics** on [Discord](https://discord.gg/chxfVqqs7). Topics are chosen by the community there, not on GitHub.
 - **Review results.** Reproduce a benchmark on your machine, read an agent's notes, and point out errors. Open an issue in the project repository (`MaterIA-Lab/op-<name>`).
 - **Improve a project.** Fix a prototype, improve its tests, or clarify its `SUMMARY.md`. Open a pull request against the project repository.
 - **Improve the root repository.** That covers agent rules, scripts and workflows. Open a pull request here.
@@ -12,7 +12,7 @@ Thanks for your interest! Anyone can contribute, and anyone can join the staff.
 
 ## Joining the staff
 
-Ask on Discord. The staff helps run projects, review results and decide how money is spent.
+Ask on [Discord](https://discord.gg/chxfVqqs7). The staff helps run projects, review results and decide how money is spent.
 
 ## Pull requests
 

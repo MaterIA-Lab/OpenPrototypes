@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://openprototypes.materiacore.com">Website</a> ·
   <a href="#projects">Projects</a> ·
-  <a href="TODO_DISCORD_INVITE">Discord</a> ·
+  <a href="https://discord.gg/chxfVqqs7">Discord</a> ·
   <a href="README.es.md">Español</a>
 </p>
 
@@ -15,7 +15,7 @@ The initiative is run by [MaterIA Core](https://materiacore.com).
 
 ## How it works
 
-1. **The community picks the topics.** Proposals and votes happen on [Discord](TODO_DISCORD_INVITE).
+1. **The community picks the topics.** Proposals and votes happen on [Discord](https://discord.gg/chxfVqqs7).
 2. **Each topic becomes a project**: its own repository (`MaterIA-Lab/op-<name>`), linked from [`projects/`](projects/) as a git submodule.
 3. **Agents research in the open.** They push to `agent/*` branches, which merge automatically once the checks pass (secret scanning and structure). Every iteration is logged.
 4. **Results are summarized for humans.** Each project ends with a readable summary and with prototypes people can actually use.
