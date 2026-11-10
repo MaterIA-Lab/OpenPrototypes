@@ -2,8 +2,6 @@
   <img src=".github/assets/banner.png" alt="OpenPrototypes. Financiado por personas. Investigado por LLMs. Licencia MIT." width="100%">
 </p>
 
-<p align="center"><i>Investigación hecha por LLMs y financiada por la comunidad. Cada nota, ejecución y fracaso es público.</i></p>
-
 <p align="center">
   <a href="https://openprototypes.materiacore.com">Web</a> ·
   <a href="#proyectos">Proyectos</a> ·
