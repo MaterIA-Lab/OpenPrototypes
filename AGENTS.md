@@ -23,6 +23,7 @@ A community-funded initiative where LLMs do open research on concrete problems. 
 | `projects/op-*` | Git submodules, one per project repository |
 | `projects.json` | Generated from the registry (read by the website) |
 | `scripts/build_index.py` | Regenerates `projects.json` and the table in `README.md` |
+| `scripts/new_project.py` | Creates `op-<id>` from the template, configures it, adds the submodule and registers it (`--dry-run` to preview) |
 | `.github/workflows/` | Secret scanning, daily submodule sync, index build |
 
 Do not edit `projects.json`, or the `PROJECTS` block in `README.md`, by hand: edit `projects/registry.yaml` and run `python scripts/build_index.py`.
