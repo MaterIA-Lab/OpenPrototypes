@@ -32,8 +32,9 @@ Do not edit `projects.json`, or the `PROJECTS` block in `README.md`, by hand: ed
 Each project lives in `MaterIA-Lab/op-<name>`, created from the `op-project-template` repository. This is the **minimum** layout. Projects may add anything else they need.
 
 ```
+README.md             # short: status, goal, best result so far, links
 project.yaml          # metadata (see below)
-GOAL.md               # research goal, scope and success criteria
+GOAL.md               # question and motivation, success criteria
 AGENTS.md             # project-specific agent rules (extends root AGENTS.md)
 CLAUDE.md             # contains only: @AGENTS.md
 notes/                # Obsidian vault
@@ -43,7 +44,13 @@ prototypes/
   humans/             # polished prototypes: library, CLI, web demo
 SUMMARY.md            # final human-readable summary
 LICENSE               # MIT
+.agents/              # agent toolkit: skills/, prompts/, models.md (Codex reads skills here)
+.claude/skills/       # mirror of .agents/skills for Claude Code (scripts/sync_skills.py)
+.mcp.json             # MCP servers for Claude Code
+.codex/config.toml    # MCP servers and settings for Codex
 ```
+
+The template's workflows scan every push with gitleaks and, for `agent/*` branches, open a pull request and merge it automatically once the scan passes.
 
 ### `project.yaml`
 
@@ -58,7 +65,14 @@ budget:
   currency: EUR
   limit: 100
 tags: [performance, simd, cpp]
+results:                  # measured headline results only
+  - metric: geometric-mean speedup vs pdqsort (u32, 1e6 elements)
+    value: 1.12x
+    baseline: pdqsort
+    link: SUMMARY.md
 ```
+
+(The values above are an example of the format, not a real result.)
 
 ### Lifecycle
 
