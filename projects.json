@@ -4,7 +4,7 @@
       "id": "supersort",
       "title": "SuperSort",
       "status": "active",
-      "goal": "Research practical architecture-aware CPU sorting for numeric types and objects, with reproducible comparisons to competitive reference implementations.",
+      "goal": "Search for genuinely new, architecture-aware mechanisms that make practically relevant sorting tasks substantially faster than the best existing implementations.",
       "repo": "MaterIA-Lab/op-supersort",
       "path": "projects/op-supersort",
       "tags": [
