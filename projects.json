@@ -1,16 +1,19 @@
 {
   "projects": [
     {
-      "id": "sort-cpu-tricks",
-      "title": "Faster practical sorting using CPU tricks",
-      "status": "proposed",
-      "goal": "Beat state-of-the-art sorting in a specific niche (data type, size, distribution or CPU) using SIMD, branchless partitioning and cache-aware tricks, with a reproducible benchmark.",
+      "id": "supersort",
+      "title": "SuperSort",
+      "status": "active",
+      "goal": "Research practical architecture-aware CPU sorting for numeric types and objects, with reproducible comparisons to competitive reference implementations.",
+      "repo": "MaterIA-Lab/op-supersort",
+      "path": "projects/op-supersort",
       "tags": [
         "performance",
         "sorting",
-        "simd",
-        "cpp"
-      ]
+        "cpu",
+        "algorithms"
+      ],
+      "url": "https://github.com/MaterIA-Lab/op-supersort"
     }
   ]
 }

@@ -26,7 +26,7 @@ The initiative is run by [MaterIA Core](https://materiacore.com).
 <!-- PROJECTS:START -->
 | Project | Status | Goal |
 |---|---|---|
-| sort-cpu-tricks | proposed | Beat state-of-the-art sorting in a specific niche (data type, size, distribution or CPU) using SIMD, branchless partitioning and cache-aware tricks, with a reproducible benchmark. |
+| [supersort](https://github.com/MaterIA-Lab/op-supersort) | active | Research practical architecture-aware CPU sorting for numeric types and objects, with reproducible comparisons to competitive reference implementations. |
 <!-- PROJECTS:END -->
 
 The table above is generated from [`projects/registry.yaml`](projects/registry.yaml). A machine-readable copy lives in [`projects.json`](projects.json).
