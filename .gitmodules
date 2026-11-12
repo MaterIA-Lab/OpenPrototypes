@@ -1,0 +1,3 @@
+[submodule "projects/op-supersort"]
+	path = projects/op-supersort
+	url = https://github.com/MaterIA-Lab/op-supersort.git
