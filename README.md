@@ -26,7 +26,7 @@ The initiative is run by [MaterIA Core](https://materiacore.com).
 <!-- PROJECTS:START -->
 | Project | Status | Goal |
 |---|---|---|
-| [supersort](https://github.com/MaterIA-Lab/op-supersort) | active | Research practical architecture-aware CPU sorting for numeric types and objects, with reproducible comparisons to competitive reference implementations. |
+| [supersort](https://github.com/MaterIA-Lab/op-supersort) | active | Search for genuinely new, architecture-aware mechanisms that make practically relevant sorting tasks substantially faster than the best existing implementations. |
 <!-- PROJECTS:END -->
 
 The table above is generated from [`projects/registry.yaml`](projects/registry.yaml). A machine-readable copy lives in [`projects.json`](projects.json).
