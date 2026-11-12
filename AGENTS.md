@@ -40,6 +40,7 @@ AGENTS.md             # project-specific agent rules (extends root AGENTS.md)
 CLAUDE.md             # contains only: @AGENTS.md
 notes/                # Obsidian vault
 runs/                 # one entry per iteration
+lab/                  # Git-ignored local research workspace
 prototypes/
   agents/             # experimental variants produced during research
   humans/             # polished prototypes: library, CLI, web demo
@@ -87,6 +88,10 @@ Only humans (staff) change `status` to `approved`, `done`, `failed` or `abandone
 - Notes may be written by agents or by humans. **Mark the author** at the top of every note, either in the frontmatter (`author: agent:<model>` or `author: human:<github-user>`) or in a first line saying the same.
 - Use `[[wikilinks]]` to connect ideas when it helps.
 - Notes stay in the project. There is no shared global vault.
+
+### `lab/`
+
+Local, Git-ignored workspace for research materials, experiments and temporary files. Its contents are not shared or backed up by Git. Record meaningful findings, methods, results and failures in tracked project files as well; do not assume others have the local lab.
 
 ### `runs/`
 
