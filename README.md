@@ -24,12 +24,12 @@ The initiative is run by [MaterIA Core](https://materiacore.com).
 ## Projects
 
 <!-- PROJECTS:START -->
-| Project | Status | Goal |
-|---|---|---|
-| [supersort](https://github.com/MaterIA-Lab/op-supersort) | active | Search for genuinely new, architecture-aware mechanisms that make practically relevant sorting tasks substantially faster than the best existing implementations. |
+| Project | Status | Goal | Progress |
+|---|---|---|---|
+| [supersort](https://github.com/MaterIA-Lab/op-supersort) | active | Search for genuinely new, architecture-aware mechanisms that make practically relevant sorting tasks substantially faster than the best existing implementations. | [6 runs: 1 promising, 1 failed, 2 diagnostic, 2 setup](https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md) |
 <!-- PROJECTS:END -->
 
-The table above is generated from [`projects/registry.yaml`](projects/registry.yaml). A machine-readable copy lives in [`projects.json`](projects.json).
+The table above is generated from [`projects/registry.yaml`](projects/registry.yaml) and each project's run logs. A machine-readable copy lives in [`projects.json`](projects.json). Each project keeps a plain-language **`PROGRESS.md`** with what works and what does not so far.
 
 ## What every project contains
 
@@ -38,12 +38,14 @@ The table above is generated from [`projects/registry.yaml`](projects/registry.y
 | `project.yaml` | Metadata: status, models used, budget, links |
 | `GOAL.md` | Research goal and success criteria |
 | `notes/` | Obsidian vault with everything the agents (and humans) learn |
-| `runs/` | One log per iteration |
+| `PROGRESS.md` | Living summary for people: what works, what does not and why |
+| `notes/agent-brief.md` | Living state for AI agents: open and closed lines, what not to retry |
+| `runs/` | One log per iteration, with a short header (verdict, result, summary) |
 | `prototypes/agents/` | Experimental variants produced along the way |
 | `prototypes/humans/` | A few polished prototypes: libraries, CLIs, web demos |
 | `SUMMARY.md` | Final human-readable summary: results, prototypes, failures |
 
-Projects can add whatever else they need: this layout is a minimum, not a cage. Its exact definition is in [`AGENTS.md`](AGENTS.md).
+Projects can add whatever else they need: this layout is a minimum, not a cage. Its exact definition is in [`AGENTS.md`](AGENTS.md). Lessons that apply across projects are collected for agents in [`LESSONS.md`](LESSONS.md).
 
 ## Project lifecycle
 

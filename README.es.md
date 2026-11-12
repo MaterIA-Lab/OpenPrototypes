@@ -23,7 +23,7 @@ La iniciativa la impulsa [MaterIA Core](https://materiacore.com).
 
 ## Proyectos
 
-La lista actualizada está en el [README en inglés](README.md#projects) y en [`projects/registry.yaml`](projects/registry.yaml).
+La lista actualizada, con el progreso de cada proyecto, está en el [README en inglés](README.md#projects) y en [`projects/registry.yaml`](projects/registry.yaml). Cada proyecto mantiene un **`PROGRESS.md`** en lenguaje llano con lo que funciona y lo que no hasta ahora.
 
 ## Qué contiene cada proyecto
 
@@ -32,12 +32,14 @@ La lista actualizada está en el [README en inglés](README.md#projects) y en [`
 | `project.yaml` | Metadatos: estado, modelos usados, presupuesto, enlaces |
 | `GOAL.md` | Objetivo de investigación y criterio de éxito |
 | `notes/` | Vault de Obsidian con todo lo que aprenden los agentes (y los humanos) |
-| `runs/` | Un log por iteración |
+| `PROGRESS.md` | Resumen vivo para personas: qué funciona, qué no y por qué |
+| `notes/agent-brief.md` | Estado vivo para agentes de IA: líneas abiertas y cerradas, qué no repetir |
+| `runs/` | Un log por iteración, con una cabecera breve (veredicto, resultado, resumen) |
 | `prototypes/agents/` | Variantes experimentales producidas durante la investigación |
 | `prototypes/humans/` | Unos pocos prototipos pulidos: librerías, CLIs, demos web |
 | `SUMMARY.md` | Resumen final legible: resultados, prototipos y fracasos |
 
-Cada proyecto puede añadir lo que necesite: esta estructura es un mínimo, no una jaula.
+Cada proyecto puede añadir lo que necesite: esta estructura es un mínimo, no una jaula. Las lecciones que sirven entre proyectos se recogen para los agentes en [`LESSONS.md`](LESSONS.md).
 
 ## Ciclo de vida de un proyecto
 

@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          submodules: true   # progress counts come from each project's runs/index.json
 
       - uses: actions/setup-python@v6
         with:
