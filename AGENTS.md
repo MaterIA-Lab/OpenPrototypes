@@ -22,7 +22,8 @@ A community-funded initiative where LLMs do open research on concrete problems. 
 | `projects/registry.yaml` | Source of truth for the list of projects and their metadata |
 | `projects/op-*` | Git submodules, one per project repository |
 | `projects.json` | Generated from the registry (read by the website) |
-| `scripts/build_index.py` | Regenerates `projects.json` and the table in `README.md` |
+| `scripts/build_index.py` | Regenerates `projects.json` and the table in `README.md`, including progress counts read from each project's `runs/index.json` (initialize submodules first) |
+| `LESSONS.md` | Lessons for agents that apply across projects |
 | `scripts/new_project.py` | Creates `op-<id>` from the template, configures it, adds the submodule and registers it (`--dry-run` to preview) |
 | `.github/workflows/` | Secret scanning, daily submodule sync, index build |
 
@@ -39,11 +40,14 @@ GOAL.md               # question and motivation, success criteria
 AGENTS.md             # project-specific agent rules (extends root AGENTS.md)
 CLAUDE.md             # contains only: @AGENTS.md
 notes/                # Obsidian vault
-runs/                 # one entry per iteration
+  agent-brief.md      # living state for agents (read it first)
+runs/                 # one entry per iteration, each README.md with front matter
+  index.json          # generated run ledger (scripts/build_progress.py)
 lab/                  # Git-ignored local research workspace
 prototypes/
   agents/             # experimental variants produced during research
   humans/             # polished prototypes: library, CLI, web demo
+PROGRESS.md           # living summary for people: what works, what does not and why
 SUMMARY.md            # final human-readable summary
 LICENSE               # MIT
 .agents/              # agent toolkit: skills/, prompts/, models.md (Codex reads skills here)
@@ -95,7 +99,42 @@ Local, Git-ignored workspace for research materials, experiments and temporary f
 
 ### `runs/`
 
-One entry per iteration. The exact log format is still being defined during the pilot. At minimum, record the model, the tokens and cost, what you tried and the result.
+One folder per iteration, `runs/<YYYY-MM-DD>-<name>/`. At minimum, record the model, the tokens and cost, what you tried and the result. Each `README.md` starts with front matter that feeds the progress views:
+
+```yaml
+---
+title: Blocked record permutation probe
+date: 2026-11-12 16:48          # the UTC time is optional
+verdict: failed                 # works | promising | failed | inconclusive | diagnostic | setup
+summary: One or two plain sentences: what was learned and, for a failure, why.
+model: agent:gpt-6 (Codex)      # or "not captured"
+result: 0.542–0.648×            # optional
+baseline: fastest measured reference   # optional
+closes: [tile-and-sort payload permutation]   # optional
+opens: [prefetch gather as the control]       # optional
+cost: not captured              # optional
+---
+```
+
+| Verdict | Meaning |
+|---|---|
+| `works` | Met the project's success threshold on the declared workload, on fresh inputs. |
+| `promising` | A measured gain that needs more evidence. |
+| `failed` | Fell short of its preregistered threshold. |
+| `inconclusive` | Could not decide: noise, a bug, missing references or an interrupted run. |
+| `diagnostic` | Measured a bound, a cost or headroom. It does not test a candidate. |
+| `setup` | Infrastructure, smoke tests or project organisation. |
+
+`scripts/build_progress.py` validates the front matter and generates `runs/index.json` and the experiment tables in `PROGRESS.md` and `notes/agent-brief.md`. Its `--check` mode runs in CI, and the automatic merge waits for it.
+
+### Progress views
+
+Each project keeps two living summaries of all its experiments, generated in part from `runs/` and curated by the agents:
+
+- **`PROGRESS.md`, for people.** Where the research stands, what works (each number with its caveats), what does not and why, and what comes next. Plain language for a curious non-expert. `SUMMARY.md` is written from it when the project closes.
+- **`notes/agent-brief.md`, for agents.** Dense and precise: the state of each line of work, what not to retry and why, the controls and references to beat, the contracts used, and environment traps. Read it before starting work on a project.
+
+Update both at the end of every run with the `close-run` skill, including failed and abandoned runs.
 
 ### `prototypes/`
 
@@ -108,6 +147,8 @@ Written for a non-expert human. Cover what was the goal, what was achieved (with
 
 ## Working style
 
+- When you start on a project, read its `notes/agent-brief.md` and the root [`LESSONS.md`](LESSONS.md).
+- When a lesson would help in other projects, add it to `LESSONS.md` with a link to the evidence.
 - Prefer small, reproducible steps. Commit often, with clear messages.
 - Write down hypotheses before testing them, and update them with the outcome.
 - When something is uncertain, say so explicitly.
