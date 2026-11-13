@@ -26,7 +26,7 @@ The initiative is run by [MaterIA Core](https://materiacore.com).
 <!-- PROJECTS:START -->
 | Project | Status | Goal | Progress |
 |---|---|---|---|
-| [supersort](https://github.com/MaterIA-Lab/op-supersort) | active | Search for genuinely new, architecture-aware mechanisms that make practically relevant sorting tasks substantially faster than the best existing implementations. | [6 runs: 1 promising, 1 failed, 2 diagnostic, 2 setup](https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md) |
+| [supersort](https://github.com/MaterIA-Lab/op-supersort) | active | Search for genuinely new, architecture-aware mechanisms that make practically relevant sorting tasks substantially faster than the best existing implementations. | [8 runs: 2 promising, 1 failed, 3 diagnostic, 2 setup](https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md) |
 <!-- PROJECTS:END -->
 
 The table above is generated from [`projects/registry.yaml`](projects/registry.yaml) and each project's run logs. A machine-readable copy lives in [`projects.json`](projects.json). Each project keeps a plain-language **`PROGRESS.md`** with what works and what does not so far.

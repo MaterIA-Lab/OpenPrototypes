@@ -15,20 +15,20 @@
       ],
       "url": "https://github.com/MaterIA-Lab/op-supersort",
       "progress": {
-        "runs": 6,
+        "runs": 8,
         "verdicts": {
-          "promising": 1,
+          "promising": 2,
           "failed": 1,
-          "diagnostic": 2,
+          "diagnostic": 3,
           "setup": 2
         },
         "latest": {
-          "id": "2026-11-12-page-remapped-merge-candidate",
-          "title": "Page-remapped merge candidate",
-          "date": "2026-11-12 17:33",
+          "id": "2026-11-12-gharchive-disjoint-merge",
+          "title": "Page remapping on GH Archive batch sizes",
+          "date": "2026-11-12 18:34",
           "verdict": "promising",
-          "summary": "Mapping aligned input pages into the output beat the best fresh-output merge of two sorted runs of 128-byte records by 1.33–1.36×, and by 2.67× when 75% of the output was mapped. It lost to a merge into an already-touched buffer (0.36–0.74×) and regressed on bursty and interleaved runs (0.82–0.86×). Synthetic data only.",
-          "result": "1.326–2.668× on edge-overlap runs (2/4 cases ≥1.3×, 0/4 ≥1.5× on both seeds)"
+          "summary": "On eight disjoint pairs with batch sizes and order derived from GH Archive, remapping beat every fresh-output reference. It beat the resident-buffer references in the two cases where almost all pages could be mapped. Real overlapping arrivals remain untested.",
+          "result": "1.431–7.252× fresh (7/8 ≥1.5×); 2/8 resident ≥1.5×"
         },
         "human": "https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md",
         "agents": "https://github.com/MaterIA-Lab/op-supersort/blob/main/notes/agent-brief.md"
