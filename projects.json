@@ -15,20 +15,20 @@
       ],
       "url": "https://github.com/MaterIA-Lab/op-supersort",
       "progress": {
-        "runs": 8,
+        "runs": 12,
         "verdicts": {
           "promising": 2,
-          "failed": 1,
-          "diagnostic": 3,
+          "failed": 4,
+          "diagnostic": 4,
           "setup": 2
         },
         "latest": {
-          "id": "2026-11-12-gharchive-disjoint-merge",
-          "title": "Page remapping on GH Archive batch sizes",
-          "date": "2026-11-12 18:34",
-          "verdict": "promising",
-          "summary": "On eight disjoint pairs with batch sizes and order derived from GH Archive, remapping beat every fresh-output reference. It beat the resident-buffer references in the two cases where almost all pages could be mapped. Real overlapping arrivals remain untested.",
-          "result": "1.431–7.252× fresh (7/8 ≥1.5×); 2/8 resident ≥1.5×"
+          "id": "2026-11-14-taxi-page-coverage",
+          "title": "Page reuse in completed taxi-trip batches",
+          "date": "2026-11-14 16:11",
+          "verdict": "diagnostic",
+          "summary": "Only one of twelve weekly pairs overlapped in pickup time. Four rows of that pair fell inside the overlap, and choosing the output offset did not increase its page reuse.",
+          "result": "1/12 weekly pairs overlapped and 0/12 put at least 5% of rows in the overlap"
         },
         "human": "https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md",
         "agents": "https://github.com/MaterIA-Lab/op-supersort/blob/main/notes/agent-brief.md"
