@@ -113,8 +113,17 @@ baseline: fastest measured reference   # optional
 closes: [tile-and-sort payload permutation]   # optional
 opens: [prefetch gather as the control]       # optional
 cost: not captured              # optional
+speedup: 0.542–0.648            # optional: best reference time ÷ candidate time
+estimate: false                 # optional: true for an estimated headroom
+how: Plain words on how the idea was supposed to work.          # required unless setup
+compared_with: What it raced against.                            # required unless setup
+faster_where: Where it was faster or slower, and by how much.    # required unless setup
+title_es: …                     # optional Spanish versions: title_es, how_es,
+how_es: …                       # compared_with_es, faster_where_es
 ---
 ```
+
+`how`, `compared_with` and `faster_where` are the run's explanation on the [OpenPrototypes website](https://openprototypes.materiacore.com): each project page shows a run log built from `runs/index.json`, and anyone can click a run to read them. Write them for a curious non-expert and keep every caveat next to its number. The project's `runs/README.md` has the full rules.
 
 | Verdict | Meaning |
 |---|---|
