@@ -15,20 +15,20 @@
       ],
       "url": "https://github.com/MaterIA-Lab/op-supersort",
       "progress": {
-        "runs": 12,
+        "runs": 17,
         "verdicts": {
           "promising": 2,
-          "failed": 4,
-          "diagnostic": 4,
+          "failed": 7,
+          "diagnostic": 6,
           "setup": 2
         },
         "latest": {
-          "id": "2026-11-14-taxi-page-coverage",
-          "title": "Page reuse in completed taxi-trip batches",
-          "date": "2026-11-14 16:11",
-          "verdict": "diagnostic",
-          "summary": "Only one of twelve weekly pairs overlapped in pickup time. Four rows of that pair fell inside the overlap, and choosing the output offset did not increase its page reuse.",
-          "result": "1/12 weekly pairs overlapped and 0/12 put at least 5% of rows in the overlap"
+          "id": "2026-11-16-linux-producer-placement",
+          "title": "Producing two batches and their merged view on Linux",
+          "date": "2026-11-16 15:15",
+          "verdict": "failed",
+          "summary": "Adjusted page placement was 1.231–1.280× as fast as the best direct writer across eight fresh edge-overlap cases on two Linux runners. Every case missed the 1.30× target, and building the two batches took 80–84% of the remapping time.",
+          "result": "1.231–1.280× on the eight holdout cases, with 0/8 meeting the 77% time limit"
         },
         "human": "https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md",
         "agents": "https://github.com/MaterIA-Lab/op-supersort/blob/main/notes/agent-brief.md"
