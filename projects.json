@@ -15,20 +15,20 @@
       ],
       "url": "https://github.com/MaterIA-Lab/op-supersort",
       "progress": {
-        "runs": 22,
+        "runs": 26,
         "verdicts": {
           "promising": 3,
-          "failed": 11,
+          "failed": 15,
           "diagnostic": 6,
           "setup": 2
         },
         "latest": {
-          "id": "2026-11-23-fide-rating-updates",
-          "title": "Updating a chess ranking with monthly FIDE ratings",
-          "date": "2026-11-23 01:39",
+          "id": "2026-11-24-gpu-sort-return",
+          "title": "Compressing GPU-sorted keys for the trip back to RAM",
+          "date": "2026-11-24 12:24",
           "verdict": "failed",
-          "summary": "The frozen direct-span prototype reordered 464,388 FIDE rating records 1.18-1.23× as fast as Rust's unstable full sort, the fastest reference. All 252 calls were correct. Neither cache condition reached the 1.30× target.",
-          "result": "1.178-1.230× against Rust's unstable full sort on the June to July 2024 transition"
+          "summary": "The encoded return sent about half the bytes, and CPU reconstruction more than offset the transfer savings. Copying full keys won all six cases on the RTX 3070.",
+          "result": "0.348-0.579× on four primary comparisons"
         },
         "human": "https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md",
         "agents": "https://github.com/MaterIA-Lab/op-supersort/blob/main/notes/agent-brief.md"
