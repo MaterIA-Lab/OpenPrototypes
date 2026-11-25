@@ -15,20 +15,20 @@
       ],
       "url": "https://github.com/MaterIA-Lab/op-supersort",
       "progress": {
-        "runs": 26,
+        "runs": 28,
         "verdicts": {
           "promising": 3,
-          "failed": 15,
+          "failed": 17,
           "diagnostic": 6,
           "setup": 2
         },
         "latest": {
-          "id": "2026-11-24-gpu-sort-return",
-          "title": "Compressing GPU-sorted keys for the trip back to RAM",
-          "date": "2026-11-24 12:24",
+          "id": "2026-11-24-exception-mask-sort",
+          "title": "Sorting repeated keys together across exception gaps",
+          "date": "2026-11-24 16:16",
           "verdict": "failed",
-          "summary": "The encoded return sent about half the bytes, and CPU reconstruction more than offset the transfer savings. Copying full keys won all six cases on the RTX 3070.",
-          "result": "0.348-0.579× on four primary comparisons"
+          "summary": "A mask grouped nearby equal keys despite interruptions, but the fixed blocks produced more tags than exact runs on the four main inputs. The full sort reached 1.004-1.086× against the run-based reference.",
+          "result": "1.004-1.086× on four primary comparisons"
         },
         "human": "https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md",
         "agents": "https://github.com/MaterIA-Lab/op-supersort/blob/main/notes/agent-brief.md"
