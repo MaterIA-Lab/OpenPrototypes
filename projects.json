@@ -15,20 +15,20 @@
       ],
       "url": "https://github.com/MaterIA-Lab/op-supersort",
       "progress": {
-        "runs": 28,
+        "runs": 29,
         "verdicts": {
           "promising": 3,
-          "failed": 17,
+          "failed": 18,
           "diagnostic": 6,
           "setup": 2
         },
         "latest": {
-          "id": "2026-11-24-exception-mask-sort",
-          "title": "Sorting repeated keys together across exception gaps",
-          "date": "2026-11-24 16:16",
+          "id": "2026-11-27-rolling-rank-chunks",
+          "title": "Reusing packed rank groups across sliding windows",
+          "date": "2026-11-27 13:55",
           "verdict": "failed",
-          "summary": "A mask grouped nearby equal keys despite interruptions, but the fixed blocks produced more tags than exact runs on the four main inputs. The full sort reached 1.004-1.086× against the run-based reference.",
-          "result": "1.004-1.086× on four primary comparisons"
+          "summary": "Keeping already packed indices between adjacent windows was slower than packing them again, even though only one or two groups changed. The fastest cached variant ran at 0.647–0.950× the speed of the best reference on the main inputs.",
+          "result": "0.647–0.950× on primary inputs across two passes"
         },
         "human": "https://github.com/MaterIA-Lab/op-supersort/blob/main/PROGRESS.md",
         "agents": "https://github.com/MaterIA-Lab/op-supersort/blob/main/notes/agent-brief.md"
